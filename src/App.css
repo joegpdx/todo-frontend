@@ -1,6 +1,8 @@
 header {
   display: flex;
   align-items: center;
+  font-size: xx-large;
+  font-weight: bold;
   justify-content: center;
   background: #39394a;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -61,8 +63,10 @@ input {
   width: 50%;
   /* color: white; */
   text-align: center;
+  font-size: xx-large;
+  font-weight: bold;
   background: #39394a;
-  border-radius: 1px;
+  border-radius: 2px;
   padding: 1px;
   border: 1px solid #9494a4;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -88,6 +92,7 @@ input {
   color: red;
   display: flex;
   font-size: xx-large;
+  font-weight: bold;
   cursor: pointer;
   /* background-color: buttonface;
   box-sizing: border-box; */
