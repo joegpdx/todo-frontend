@@ -11,24 +11,13 @@ header {
   /* color: white; */
 }
 
-div {
-  
+.inline {
+  display: flex;
+  justify-content: center;
 }
 
 a:link {
   text-decoration: none;
-}
-
-.App-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #39394a;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  text-transform: capitalize;
-  color: #f66a6a;
-  padding: 10px;
-  /* color: white; */
 }
 
 input {
@@ -59,10 +48,10 @@ input {
 } */
 
  p{
-  margin: auto;
+  margin: 0px;
   width: 50%;
   /* color: white; */
-  text-align: center;
+  /* text-align: center; */
   font-size: xx-large;
   font-weight: bold;
   background: #39394a;
@@ -73,33 +62,34 @@ input {
   list-style-type: none;
   text-transform: capitalize;
   color: #f66a6a;
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
 }
 
 .skull {
-  margin: auto;
+  /* margin: auto; */
+  /* justify-content: space-between; */
   /* width: 30%;
   color: white; */
-  text-align: right;
+  /* text-align: right; */
   background: #39394a;
-  border-radius: 1px;
+  border-radius: 2px;
   padding: 1px;
   border: 1px solid #9494a4;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   list-style-type: none;
   text-transform: capitalize;
   color: red;
-  display: flex;
+  /* display: flex; */
   font-size: xx-large;
   font-weight: bold;
   cursor: pointer;
   /* background-color: buttonface;
   box-sizing: border-box; */
-  margin: 0em;
+  /* margin: 0em; */
   /* font: 900 14px; */
-  padding: 0px;
-  border-width: 0px;
+  /* padding: 0px; */
+  /* border-width: 0px; */
   border-style: solid;
   /* border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186); */
   /* border-image: initial; */
@@ -109,11 +99,11 @@ input {
     color: #f66a6a;
 } */
 
-img {
+/* img {
   max-width: 90%;
   height: 500px;
   width: 500px;
-}
+} */
 
 .App {
   text-align: center;

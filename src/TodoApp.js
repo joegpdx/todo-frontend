@@ -62,7 +62,8 @@ export default class TodoApp extends Component {
                 handleInput={ this.handleInput } 
                 />
                 {
-                    this.state.todos.map((todo) => <p 
+                    this.state.todos.map((todo) => <div className='inline'>
+                        <p 
                         style={{
                             textDecoration: todo.complete ? 'line-through' : 'none'
                         }}
@@ -78,8 +79,9 @@ export default class TodoApp extends Component {
                         const data = await request.put(`https://aqueous-anchorag-todo.herokuapp.com/api/todos/${todo.id}`, matchingTodo);
                     }} key={todo.id}>
                         {todo.task}
-                        <button class='skull' onClick={ () => this.handleDelete(todo.id) } >✖</button>
-                    </p>)
+                    </p>
+                    <button class='skull' onClick={ () => this.handleDelete(todo.id) } >✖</button>
+                        </div>)
                 }
             </div>
         )
