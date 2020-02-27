@@ -32,10 +32,12 @@ export default class TodoApp extends Component {
             .set('Authorization', user.token);
     }
     handleDelete = async (id) => {
-        await request.delete(`https://aqueous-anchorag-todo.herokuapp.com/api/todos/${id}`);
-        // const user = JSON.parse(localStorage.getItem('user'));
-        const todos = await request.get('https://aqueous-anchorag-todo.herokuapp.com/api/todos')
+        const user = JSON.parse(localStorage.getItem('user'));
 
+        await request.delete(`https://aqueous-anchorag-todo.herokuapp.com/api/todos/${id}`)
+            .set('Authorization', user.token);
+        const todos = await request.get('https://aqueous-anchorag-todo.herokuapp.com/api/todos')
+            .set('Authorization', user.token);
         console.log(todos.body)
         this.setState({ todos: todos.body })
 
@@ -47,8 +49,10 @@ export default class TodoApp extends Component {
     handleInput = (e) => { this.setState({ todoInput: e.target.value })};
     
     render() {
+        if (localStorage.getItem('user')) {
         return (
             <div>
+                <h3>Hello {JSON.parse(localStorage.getItem('user')).email}</h3>
                 <AddTodo 
                 todoInput={ this.state.todoInput } 
                 handleClick={ this.handleClick } 
@@ -75,10 +79,11 @@ export default class TodoApp extends Component {
                     }} key={todo.id}>
                         {todo.task}
                     </p>
-                    <button class='skull' onClick={ () => this.handleDelete(todo.id) } >✖</button>
+                    <button className='skull' onClick={ () => this.handleDelete(todo.id) } >✖</button>
                         </div>)
                 }
             </div>
-        )
+            )
+        }
     }
 }
