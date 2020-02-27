@@ -52,7 +52,7 @@ export default class TodoApp extends Component {
     }
 
     handleLogout = () => {
-        alert('you are now logged out');
+        alert('Logged 0ut');
         localStorage.clear();
         window.location = ('/');
     }
