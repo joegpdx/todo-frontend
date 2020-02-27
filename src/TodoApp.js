@@ -51,6 +51,12 @@ export default class TodoApp extends Component {
         // this.props.history.push('/');
     }
 
+    handleLogout = () => {
+        alert('you are now logged out');
+        localStorage.clear();
+        window.location = ('/');
+    }
+
     handleInput = (e) => { this.setState({ todoInput: e.target.value })};
     
     render() {
@@ -58,10 +64,12 @@ export default class TodoApp extends Component {
         return (
             <div>
                 <h3>Hello {JSON.parse(localStorage.getItem('user')).email}</h3>
+                <button className='signOut' onClick={this.handleLogout} >LOGOUT</button>
                 <AddTodo 
                 todoInput={ this.state.todoInput } 
                 handleClick={ this.handleClick } 
                 handleInput={ this.handleInput } 
+                handleLogout={ this.handleLogout }
                 />
                 {
                     this.state.todos.map((todo) => <div className='inline'>
