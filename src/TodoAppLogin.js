@@ -16,6 +16,9 @@ export default class TodoAppLogin extends Component {
         })
 
         localStorage.setItem('user', JSON.stringify(signIn.body));
+
+        this.props.history.push('/')
+
     }
 
     handleSignUp = async () => {
@@ -25,6 +28,8 @@ export default class TodoAppLogin extends Component {
         })
 
         localStorage.setItem('user', JSON.stringify(signUp.body));
+
+        this.props.history.push('/')
     }
 
     render() {

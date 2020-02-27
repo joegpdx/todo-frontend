@@ -14,22 +14,27 @@ export default class TodoApp extends Component {
     }
 
     handleClick = async () => {
-        const newTodo = {
-            // math.random() is fine here because this is a fake todo
-            id: Math.random(),
-            task: this.state.todoInput,
-            complete: false,
-        };
+        // const newTodo = {
+        //     // math.random() is fine here because this is a fake todo
+        //     id: Math.random(),
+        //     task: this.state.todoInput,
+        //     complete: false,
+        // };
 
         const user = JSON.parse(localStorage.getItem('user'));
 
-        const newTodos = [...this.state.todos, newTodo];
+        // const newTodos = [...this.state.todos, newTodo];
 
-        this.setState({ todos: newTodos });
-        const data = await request.post('https://aqueous-anchorag-todo.herokuapp.com/api/todos', {
+        // this.setState({ todos: newTodos });
+        const data = await request.post('https://aqueous-anchorag-todo.herokuapp.com/api/todos', {  
             task: this.state.todoInput
         })
             .set('Authorization', user.token);
+        const todos = await request.get('https://aqueous-anchorag-todo.herokuapp.com/api/todos')
+            .set('Authorization', user.token);
+
+        console.log(todos.body)
+        this.setState({ todos: todos.body })
     }
     handleDelete = async (id) => {
         const user = JSON.parse(localStorage.getItem('user'));
