@@ -34,7 +34,7 @@ export default class TodoAppLogin extends Component {
 
     render() {
         return (
-            <div>
+            <div className='login'>
                 User Name:<input value={ this.state.usernameSignUp} onChange={(e) => this.setState({ usernameSignUp: e.target.value})} />Password:
                 <input type="password" value={ this.state.passwordSignUp} onChange={(e) => this.setState({ passwordSignUp: e.target.value})} />
 
@@ -44,8 +44,7 @@ export default class TodoAppLogin extends Component {
                 <input type="password" value={ this.state.passwordSignIn} onChange={(e) => this.setState({ passwordSignIn: e.target.value})} />
 
                 <button id='add-todo' onClick={this.handleSignIn}>Sign In</button>     
-   
-                </div>
+            </div>
         )
     }
 }

@@ -10,6 +10,23 @@ header {
   color: #f66a6a;
   /* color: white; */
 }
+.login {
+  margin: 5mm;
+  padding: 10mm;
+  width: 90%;
+  /* color: white; */
+  text-align: center;
+  /* font-size: x-large; */
+  font-weight: bold;
+  background: #39394a;
+  border-radius: 20px;
+  padding: 10px;
+  border: 10px solid #9494a4;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  list-style-type: none;
+  text-transform: capitalize;
+  color: #f66a6a;
+}
 
 .inline {
   display: flex;
@@ -30,12 +47,12 @@ input {
 }
 
 #add-todo {
-    position: relative;
-    height: 25px;
-    width: 100px;
-    font-size: 1em;
-    color: #f66a6a;
-    cursor: pointer;
+    position: relative !important;
+    height: 25px !important;
+    width: 100px !important;
+    font-size: 1em !important;
+    color: #f66a6a !important;
+    cursor: pointer !important;
 }
 
 /* header h1 {
